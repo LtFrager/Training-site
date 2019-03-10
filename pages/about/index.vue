@@ -1,6 +1,6 @@
 <template>
     <div>
-        <v-parallax height="auto" src="/img/about/image1.jpg">
+        <v-parallax style="height:auto" src="/img/about/image1.jpg">
             <v-container>
                 <v-layout row align-center fill-height>
                     <v-flex xs12 sm8 md6>
@@ -32,7 +32,7 @@
 
         <title-promo :data="titlePromoData" />
 
-        <v-parallax height="auto" src="/img/about/image4.jpg">
+        <v-parallax style="height:auto" src="/img/about/image4.jpg">
             <v-container>
                 <v-layout row justify-end align-center fill-height>
                     <v-flex xs12 sm6 md5>

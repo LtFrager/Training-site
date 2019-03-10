@@ -9,7 +9,7 @@
                             <span>{{item.subtitle}}</span>
                         </h2>
 
-                        <button class="std__button">read more</button>
+                        <button class="std__button" @click="$router.push(item.link)">read more</button>
                     </v-layout>
                 </v-container>
             </v-parallax>

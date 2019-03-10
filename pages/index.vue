@@ -21,13 +21,13 @@
               extra push? Our personal trainers are certified experts in exercise physiology, anatomy, training
               program development, exercise application and fitness assessments. They work for you no matter your age
               or fitness level. </p>
-            <button class="std__button">choose your trainer</button>
+            <button class="std__button" @click="$router.push('news/id')">choose your trainer</button>
           </v-flex>
         </v-layout>
       </v-container>
     </v-parallax>
 
-    <v-parallax height="auto" src="/img/index/index2.jpg">
+    <v-parallax style="height:auto" src="/img/index/index2.jpg">
       <v-container>
         <div class="our-skils__block">
           <v-layout row column justify-center align-center fill-height>
@@ -52,7 +52,7 @@
       </v-container>
     </v-parallax>
 
-    <v-parallax height="auto" src="/img/index/index3.jpg">
+    <v-parallax style="height:auto" src="/img/index/index3.jpg">
       <v-container>
         <v-layout row align-center fill-height>
           <v-flex xs12 sm6 md5>
@@ -95,39 +95,41 @@
             orangeTitle: 'Challenge',
             title: 'yourself',
             text: 'Cum sociis natoque penatibus et magnis dis parturient ntesroin vel nibh et elit mollis commodo nec augue natoque penat.',
-            buttonLink: ''
+            link: '/news/id'
           },
           {
             img: '/img/index/slider/slide-2.jpg',
             orangeTitle: 'Never',
             title: 'give up',
             text: ' Every bodybuilder requires a lot of dedication and effort to shape his/her body into something to be proud of. We can give you everything you need for it.',
+            link: '/news/id'
           },
           {
             img: '/img/index/slider/slide-3.jpg',
             orangeTitle: 'no',
             title: 'pain no gain',
             text: 'Having a perfect body requires a lot of training. Nice-looking body and powerful organism are interconnected – and we can help you with both.',
-          },
+            link: '/news/id'
+         },
         ],
 
         promoData: [{
             img: '/img/index/promo/page-image1.jpg',
-            link: '/',
+            link: '/news/id',
             category: 'MOVEMENT',
             title: 'CYCLING & Cardio',
             text: 'Want a hotter, healthier body and a longer, happier life? Cycling is a perfect activity, we ...',
           },
           {
             img: '/img/index/promo/page-image2.jpg',
-            link: '/',
+            link: '/news/id',
             category: 'MOVEMENT',
             title: 'CYCLING & Cardio',
             text: 'Want a hotter, healthier body and a longer, happier life? Cycling is a perfect activity, we ...',
           },
           {
             img: '/img/index/promo/page-image3.jpg',
-            link: '/',
+            link: '/news/id',
             category: 'MOVEMENT',
             title: 'CYCLING & Cardio',
             text: 'Want a hotter, healthier body and a longer, happier life? Cycling is a perfect activity, we ...',
@@ -184,14 +186,14 @@
             img: '/img/index/news/img1.jpg',
             date: 'Feb 11, 2019',
             title: 'WHAT DOES DISCIPLINE LOOK LIKE?',
-            link: '/',
+            link: '/news/id',
             text: 'Most of us can agree that discipline is one of the most ...'
           },
           {
             img: '/img/index/news/img2.jpg',
             date: 'Feb 11, 2019',
             title: 'PERFECT PRACTICE MAKES PERFECT',
-            link: '/',
+            link: '/news/id',
             text: 'What are your goals in CrossFit? Are they to be the best ...'
           },
 
@@ -199,7 +201,7 @@
             img: '/img/index/news/img3.jpg',
             date: 'Feb 11, 2019',
             title: 'QUALITY BEFORE INTENSITY',
-            link: '/',
+            link: '/news/id',
             text: 'Thanks to social media accounts, we live in a time where ...'
           }
         ]

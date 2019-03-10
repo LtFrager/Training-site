@@ -1,33 +1,58 @@
 <template>
   <v-app>
     <div class="navbar">
-      <ul>
-        <li>
-          <nuxt-link to="/">
-            home
-          </nuxt-link>
-        </li>
-        <li>
-          <nuxt-link to="/about">
-            about
-          </nuxt-link>
-        </li>
-        <li>
-          <nuxt-link to="/news">
-            news
+    <v-container class="layout justify-space-between align-center">
+      <div style="width:200px; height:80px; background:#ebebeb;"></div>
+      <ul class="nav__list hidden-sm-and-down">
+        <li v-for="(item,i) in navigationData" :key="i">
+          <nuxt-link :to="item.link">
+            {{item.title}}
           </nuxt-link>
         </li>
       </ul>
+
+       <v-btn
+          icon
+          dark
+          @click.stop="drawer = !drawer"
+          color="#030409"
+          class="hidden-md-and-up"
+        >
+          <v-icon>menu</v-icon>
+        </v-btn>
+    </v-container>
     </div>
 
-    <v-content style="margin-top:70px;">
+     <v-navigation-drawer
+      v-model="drawer"
+      fixed
+      temporary
+      class="mobile-navbar"
+    >
+      <v-list class="pt-0" dense>
+        <v-divider></v-divider>
+
+        <v-list-tile
+         v-for="(item,i) in navigationData" :key="i"
+         @click="$router.push(item.link)"
+         color="#fff"
+        >
+
+          <v-list-tile-content>
+            <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+    </v-navigation-drawer>
+
+    <v-content style="margin-top:128px;">
       <nuxt />
     </v-content>
 
     <footer>
       <div class="footer__bg">
         <v-container>
-          <v-layout row wrap>
+          <v-layout row wrap grid-list-sm>
             <v-flex xs12 sm6 md3>
               <h2 class="footer__title">
                 ABOUT OUR CLUB
@@ -69,15 +94,60 @@
 </template>
 
 <script>
-
+  export default {
+    data () {
+      return {
+        drawer: null,
+        navigationData: [
+          { title: 'Home', link: '/' },
+          { title: 'About', link: '/about' },
+          { title: 'News', link: '/news' }
+        ]
+      }
+    }
+  }
 </script>
+<style lang="scss" scoped>
+.mobile-navbar{
+  background: #030409;
+}
+  .navbar {
+    background: #030409;
+    width: 100%;
+    position: fixed;
+    z-index: 3;
 
-<style lang="scss">
+    .nav__list {
+      list-style-type: none;
+      display: flex;
+      padding: 0px;
+
+      li {
+        margin-left: 20px;
+        a {
+          color: white;
+          text-decoration: none;
+          padding: 10px 0;
+          font-size: 12px;
+          letter-spacing: 1px;
+          vertical-align: top;
+          text-transform: uppercase;
+          transition: 1s;
+
+          &:hover {
+            color: #f47070;
+            transition: 1s;
+          }
+        }
+      }
+    }
+  }
+
   .footer__bg {
     background: #232a35;
     font-size: 14px;
     line-height: 24px;
-    padding: 94px 0 29px;
+    padding: 84px 0 28px;
 
     .footer__title {
       font-size: 16px;
@@ -97,26 +167,20 @@
   }
 
   .footer__bottom {
-    padding: 33px 0 18px;
     background: #1c222b;
     color: #b3bbc1;
 
     .copy {
       font-size: 14px;
       margin-bottom: 20px;
-      margin-top: 7px;
+      margin:7px 0;
       text-align: right;
     }
   }
+</style>
 
-  .navbar {
-    background: #030409;
-    height: 70px;
-    width: 100%;
-    position: fixed;
-    z-index: 99;
-  }
 
+<style lang="scss">
   body {
     background: #fff;
   }
@@ -157,21 +221,15 @@
     background: #f47070;
     text-transform: uppercase;
     color: #ffffff;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
     border-radius: 4px;
     border: 0px solid transparent;
     font-size: 12px;
     line-height: 30px;
     font-weight: bold;
     letter-spacing: 1px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 30px;
-    padding-right: 30px;
-    -webkit-transition: 0.3s;
-    -o-transition: 0.3s;
+    padding:10px 30px;
     transition: 0.3s;
+    outline:none;
 
     &:hover {
       background: #232a35;

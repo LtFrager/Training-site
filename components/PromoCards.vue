@@ -21,7 +21,7 @@
                         </p>
                         <v-card-actions v-if="item.link">
                             <v-spacer></v-spacer>
-                            <nuxt-link to="/" class="item__arrow-link">
+                            <nuxt-link :to="item.link" class="item__arrow-link">
                                 Read more
                             </nuxt-link>
                         </v-card-actions>
