@@ -118,6 +118,3 @@
 
     }
 </script>
-<style lang="scss" scoped>
-    .welcome__bg {}
-</style>

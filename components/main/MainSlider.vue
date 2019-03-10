@@ -26,10 +26,10 @@
         dots: false,
         arrows: false,
         infinite: true,
-        speed: 400,
-        // autoplay: true,
-        autoplaySpeed: 3000,
-        pauseOnHover: true,
+        speed: 800,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        pauseOnHover: false,
         slidesToShow: 1,
       });
     }
@@ -51,7 +51,7 @@
         width: 58%;
         min-width: 288px;
         padding: 15px;
-        opacity: 0;
+        
 
         .slider__title {
           color: #fff;
@@ -79,6 +79,12 @@
     }
   }
 
+  .slick-slide{
+    .slider__promo {
+    opacity: 0!important;
+    transition: 1s;
+    }
+  }
   .slick-active {
     .slider__promo {
       opacity: 1 !important;

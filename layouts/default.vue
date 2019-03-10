@@ -1,43 +1,25 @@
 <template>
-  <v-app>
+  <v-app style="background:#fff">
     <div class="navbar">
-    <v-container class="layout justify-space-between align-center">
-      <div style="width:200px; height:80px; background:#ebebeb;"></div>
-      <ul class="nav__list hidden-sm-and-down">
-        <li v-for="(item,i) in navigationData" :key="i">
-          <nuxt-link :to="item.link">
-            {{item.title}}
-          </nuxt-link>
-        </li>
-      </ul>
+      <v-container class="layout justify-space-between align-center">
+        <div style="width:200px; height:80px; background:#ebebeb;"></div>
+        <ul class="nav__list hidden-sm-and-down">
+          <li v-for="(item,i) in navigationData" :key="i">
+            <nuxt-link :to="item.link">
+              {{item.title}}
+            </nuxt-link>
+          </li>
+        </ul>
 
-       <v-btn
-          icon
-          dark
-          @click.stop="drawer = !drawer"
-          color="#030409"
-          class="hidden-md-and-up"
-        >
+        <v-btn icon dark @click.stop="drawer = !drawer" color="#030409" class="hidden-md-and-up">
           <v-icon>menu</v-icon>
         </v-btn>
-    </v-container>
+      </v-container>
     </div>
 
-     <v-navigation-drawer
-      v-model="drawer"
-      fixed
-      temporary
-      class="mobile-navbar"
-    >
+    <v-navigation-drawer v-model="drawer" fixed temporary class="mobile-navbar">
       <v-list class="pt-0" dense>
-        <v-divider></v-divider>
-
-        <v-list-tile
-         v-for="(item,i) in navigationData" :key="i"
-         @click="$router.push(item.link)"
-         color="#fff"
-        >
-
+        <v-list-tile v-for="(item,i) in navigationData" :key="i" @click="$router.push(item.link)" color="#fff">
           <v-list-tile-content>
             <v-list-tile-title>{{ item.title }}</v-list-tile-title>
           </v-list-tile-content>
@@ -51,7 +33,7 @@
 
     <footer>
       <div class="footer__bg">
-        <v-container>
+        <v-container grid-list-xl>
           <v-layout row wrap grid-list-sm>
             <v-flex xs12 sm6 md3>
               <h2 class="footer__title">
@@ -95,22 +77,31 @@
 
 <script>
   export default {
-    data () {
+    data() {
       return {
         drawer: null,
-        navigationData: [
-          { title: 'Home', link: '/' },
-          { title: 'About', link: '/about' },
-          { title: 'News', link: '/news' }
+        navigationData: [{
+            title: 'Home',
+            link: '/'
+          },
+          {
+            title: 'About',
+            link: '/about'
+          },
+          {
+            title: 'News',
+            link: '/news'
+          }
         ]
       }
     }
   }
 </script>
 <style lang="scss" scoped>
-.mobile-navbar{
-  background: #030409;
-}
+  .mobile-navbar {
+    background: #030409;
+  }
+
   .navbar {
     background: #030409;
     width: 100%;
@@ -124,6 +115,7 @@
 
       li {
         margin-left: 20px;
+
         a {
           color: white;
           text-decoration: none;
@@ -147,7 +139,7 @@
     background: #232a35;
     font-size: 14px;
     line-height: 24px;
-    padding: 84px 0 28px;
+    padding: 68px 0 18px;
 
     .footer__title {
       font-size: 16px;
@@ -173,7 +165,7 @@
     .copy {
       font-size: 14px;
       margin-bottom: 20px;
-      margin:7px 0;
+      margin: 7px 0;
       text-align: right;
     }
   }
@@ -181,10 +173,6 @@
 
 
 <style lang="scss">
-  body {
-    background: #fff;
-  }
-
   .std__title {
     font-size: 36px;
     font-weight: 800;
@@ -227,9 +215,9 @@
     line-height: 30px;
     font-weight: bold;
     letter-spacing: 1px;
-    padding:10px 30px;
+    padding: 10px 30px;
     transition: 0.3s;
-    outline:none;
+    outline: none;
 
     &:hover {
       background: #232a35;
