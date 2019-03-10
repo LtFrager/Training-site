@@ -11,17 +11,17 @@
       <v-container>
         <v-layout row justify-end align-center fill-height>
           <v-flex xs12 sm8 md6>
-            <h2 class="std__title text__black">
-              <span class="subtitle">PROFESSIONAL COACHES</span>
+            <h2 data-aos="fade-left" data-aos-duration="600" class="std__title text__black">
+              <span data-aos="slide-up" data-aos-delay="800" data-aos-duration="1000" class="subtitle">PROFESSIONAL COACHES</span>
               YOUR TRAINING
             </h2>
-            <p class="text__black std__text">My Name is Ben. I will introduce you to our fitness club with a free
+            <p data-aos="fade-up" data-aos-duration="1000" class="text__black std__text">My Name is Ben. I will introduce you to our fitness club with a free
               personal training.</p>
-            <p class="text_grey std__text">There’s nothing better than having your very own coach and mentor. Need an
+            <p data-aos="zoom-in-up" data-aos-duration="1200" class="text_grey std__text">There’s nothing better than having your very own coach and mentor. Need an
               extra push? Our personal trainers are certified experts in exercise physiology, anatomy, training
               program development, exercise application and fitness assessments. They work for you no matter your age
               or fitness level. </p>
-            <button class="std__button" @click="$router.push('news/id')">choose your trainer</button>
+            <button data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000" class="std__button" @click="$router.push('news/id')">choose your trainer</button>
           </v-flex>
         </v-layout>
       </v-container>
@@ -31,12 +31,12 @@
       <v-container>
         <div class="our-skils__block">
           <v-layout row column justify-center align-center fill-height>
-            <h2 class="std__title">CHECK OUR SKILLS</h2>
-            <p class="text_grey std__text">
+            <h2 data-aos="fade-right" data-aos-duration="1000" class="std__title">CHECK OUR SKILLS</h2>
+            <p data-aos="fade-left" data-aos-duration="1000" class="text_grey std__text">
               We’ve spent over 10 years defining fitness and now we’re reinventing it. Through personalization and
               innovation, we’ve evolved so that you can transform your life. </p>
             <v-layout row wrap style="width: 100%;">
-              <v-flex xs12 sm6 md3 class="layout justify-center" v-for="(item,i) in ourSkillsData" :key="i">
+              <v-flex data-aos="fade-up" data-aos-duration="1000" xs12 sm6 md3 class="layout justify-center" v-for="(item,i) in ourSkillsData" :key="i">
                 <div>
                   <div class="our-skils__skill">
                     {{item.skillNum}}%
@@ -65,8 +65,8 @@
     <title-promo :data="titlePromoData" />
 
     <v-container>
-      <h2 class="std__title text__black text-xs-center">
-        <span class="subtitle">PROFESSIONAL COACHES</span>
+      <h2 data-aos="fade-down" data-aos-duration="1000" class="std__title text__black text-xs-center">
+        <span data-aos="slide-up" data-aos-delay="800" data-aos-duration="1000" class="subtitle">PROFESSIONAL COACHES</span>
         YOUR TRAINING
       </h2>
       <news :data="newsData" />

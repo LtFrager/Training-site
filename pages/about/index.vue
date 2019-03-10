@@ -4,13 +4,13 @@
             <v-container>
                 <v-layout row align-center fill-height>
                     <v-flex xs12 sm8 md6>
-                        <h2 class="std__title text__black">
-                            <span class="subtitle">ABOUT</span>
+                        <h2 data-aos="fade-right" data-aos-duration="600" class="std__title text__black">
+                            <span data-aos="slide-up" data-aos-delay="800" data-aos-duration="1000" class="subtitle">ABOUT</span>
                             WELCOME!
                         </h2>
-                        <p class="text__black std__text">We believe achievements start with education and a commitment
+                        <p data-aos="fade-up" data-aos-duration="1000" class="text__black std__text">We believe achievements start with education and a commitment
                             to small, daily choices..</p>
-                        <p class="text_grey std__text">We create content that engages and informs, and we complement it
+                        <p data-aos="zoom-in-up" data-aos-duration="1200" class="text_grey std__text">We create content that engages and informs, and we complement it
                             with practical tools to make living healthy an easier and sustainable process. We started a
                             tradition when our doors first opened in 2007 of doing introductions at the beginning of
                             each class – a tradition which has been adopted by Sportek gyms all over the country. Also,
@@ -23,8 +23,8 @@
         </v-parallax>
 
         <v-container>
-            <h2 class="std__title text__black text-xs-center">
-                <span class="subtitle">TRAINERS</span>
+            <h2 data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300" class="std__title text__black text-xs-center">
+                <span data-aos="slide-up" data-aos-delay="800" data-aos-duration="1000" class="subtitle">TRAINERS</span>
                 TRAINERS
             </h2>
         </v-container>

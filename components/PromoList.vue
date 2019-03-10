@@ -1,12 +1,12 @@
 <template>
     <div>
-        <h2 class="std__title text__black" v-for="(item,i) in titleData" :key="i">
-            <span class="subtitle">{{item.subtitle}}</span>
+        <h2 data-aos="fade-left" data-aos-duration="600" class="std__title text__black" v-for="(item,i) in titleData" :key="i">
+            <span data-aos="slide-up" data-aos-delay="500" data-aos-duration="1000" class="subtitle">{{item.subtitle}}</span>
             {{item.title}}
         </h2>
 
         <ul class="promo__list">
-            <li v-for="(item,i) in data" :key="i">
+            <li data-aos="fade-up" data-aos-duration="500" data-aos-delay="500" v-for="(item,i) in data" :key="i">
                 <div>
                     <div class="list__icon">
                         {{item.icon}}

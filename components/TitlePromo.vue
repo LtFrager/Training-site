@@ -4,12 +4,12 @@
             <v-parallax height="540" :src="item.img">
                 <v-container>
                     <v-layout column justify-center align-center fill-height>
-                        <h2 class="title-promo">
+                        <h2 data-aos="fade-up" data-aos-duration="1000" class="title-promo">
                             {{item.title}}
-                            <span>{{item.subtitle}}</span>
+                            <span data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">{{item.subtitle}}</span>
                         </h2>
 
-                        <button class="std__button" @click="$router.push(item.link)">read more</button>
+                        <button data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" class="std__button" @click="$router.push(item.link)">read more</button>
                     </v-layout>
                 </v-container>
             </v-parallax>

@@ -1,7 +1,7 @@
 <template>
     <v-layout row wrap justify-center>
         <v-flex xs12 sm4 v-for="(item,i) in data" :key="i">
-            <v-card hover class="news__item">
+            <v-card data-aos="flip-left" data-aos-duration="1000" data-aos-delay="500" hover class="news__item">
                 <div class="item__img" :style="'background-image:url(' + item.img +')'">
                     <nuxt-link :to="item.link" class="item__img-link">
                     </nuxt-link>

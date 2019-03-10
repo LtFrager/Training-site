@@ -2,7 +2,7 @@
     <v-container>
         <v-layout row wrap justify-center>
             <v-flex xs12 sm4 v-for="(item,i) in data" :key="i">
-                <v-card hover class="promo__item">
+                <v-card hover class="promo__item" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-delay="500">
                     <div class="item__img" :style="'background-image:url(' + item.img +')'">
                         <nuxt-link :to="item.link" class="item__img-link">
                         </nuxt-link>
