@@ -19,9 +19,9 @@
                         <p class="item__text">
                             {{item.text}}
                         </p>
-                        <v-card-actions>
+                        <v-card-actions v-if="item.link">
                             <v-spacer></v-spacer>
-                            <nuxt-link :to="item.link" class="item__arrow-link">
+                            <nuxt-link to="/" class="item__arrow-link">
                                 Read more
                             </nuxt-link>
                         </v-card-actions>
@@ -54,7 +54,7 @@
         }
 
         .item__img {
-            height: 220px;
+            height: 280px;
             background-position: center;
             background-size: cover;
             position: relative;
@@ -117,11 +117,11 @@
             color: #f47070;
             text-decoration: none;
             font-size: 14px;
-            transition: .5s;
+            transition: 1s;
 
             &:hover {
                 color: #fff;
-                transition: .5s;
+                transition: .3s;
             }
         }
     }

@@ -1,8 +1,8 @@
 <template>
     <div>
-        <h2 class="std__title text__black" v-for="i in titleData" :key="i">
-            <span class="subtitle">{{i.subtitle}}</span>
-            {{i.title}}
+        <h2 class="std__title text__black" v-for="(item,i) in titleData" :key="i">
+            <span class="subtitle">{{item.subtitle}}</span>
+            {{item.title}}
         </h2>
 
         <ul class="promo__list">

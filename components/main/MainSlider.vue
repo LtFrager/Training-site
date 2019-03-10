@@ -38,8 +38,6 @@
 
 <style lang="scss" scoped>
   .main__slider {
-    margin-top: 70px;
-
     .slider__item {
       height: calc(80vh - 70px);
       width: 100%;

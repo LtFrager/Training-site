@@ -31,9 +31,7 @@
       <v-container>
         <div class="our-skils__block">
           <v-layout row column justify-center align-center fill-height>
-
             <h2 class="std__title">CHECK OUR SKILLS</h2>
-
             <p class="text_grey std__text">
               We’ve spent over 10 years defining fitness and now we’re reinventing it. Through personalization and
               innovation, we’ve evolved so that you can transform your life. </p>
@@ -49,7 +47,6 @@
                 </div>
               </v-flex>
             </v-layout>
-
           </v-layout>
         </div>
       </v-container>
@@ -65,31 +62,31 @@
       </v-container>
     </v-parallax>
 
-    <v-parallax height="540" src="/img/index/index4.jpg">
-      <v-container>
-        <v-layout column justify-center align-center fill-height>
-          <h2 class="promo-title__block">
-            HEALTH POWER HAPPINESS
-            <span>YOUR ESSENTIAL APPROACH TO WORKOUTS</span>
-          </h2>
+    <title-promo :data="titlePromoData" />
 
-          <button class="std__button">read more</button>
-        </v-layout>
-      </v-container>
-    </v-parallax>
-
-
+    <v-container>
+      <h2 class="std__title text__black text-xs-center">
+        <span class="subtitle">PROFESSIONAL COACHES</span>
+        YOUR TRAINING
+      </h2>
+      <news :data="newsData" />
+    </v-container>
+    
   </div>
 </template>
 <script>
   import MainSlider from '@/components/main/MainSlider'
-  import PromoCards from '@/components/main/PromoCards'
+  import TitlePromo from '@/components/TitlePromo'
+  import PromoCards from '@/components/PromoCards'
   import PromoList from '@/components/PromoList'
+  import News from '@/components/News'
   export default {
     components: {
       MainSlider,
       PromoCards,
-      PromoList
+      TitlePromo,
+      PromoList,
+      News
     },
     data() {
       return {
@@ -175,34 +172,42 @@
             title: 'EFFECTIVE GROUP TRAINING',
             text: 'Group training is a great solution for beginners who want to get better shape.',
           }
+        ],
+
+        titlePromoData: [{
+          img: '/img/index/index4.jpg ',
+          title: 'HEALTH POWER HAPPINESS',
+          subtitle: 'YOUR ESSENTIAL APPROACH TO WORKOUTS'
+        }],
+
+        newsData: [{
+            img: '/img/index/news/img1.jpg',
+            date: 'Feb 11, 2019',
+            title: 'WHAT DOES DISCIPLINE LOOK LIKE?',
+            link: '/',
+            text: 'Most of us can agree that discipline is one of the most ...'
+          },
+          {
+            img: '/img/index/news/img2.jpg',
+            date: 'Feb 11, 2019',
+            title: 'PERFECT PRACTICE MAKES PERFECT',
+            link: '/',
+            text: 'What are your goals in CrossFit? Are they to be the best ...'
+          },
+
+          {
+            img: '/img/index/news/img3.jpg',
+            date: 'Feb 11, 2019',
+            title: 'QUALITY BEFORE INTENSITY',
+            link: '/',
+            text: 'Thanks to social media accounts, we live in a time where ...'
+          }
         ]
       }
     }
   }
 </script>
 <style lang="scss" scoped>
-  .promo-title__block {
-    font-size: 60px;
-    line-height: 1.2307;
-    font-weight: 800px;
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    margin-bottom: 14px;
-
-    @media screen and (max-width: 870px) {
-      font-size: 38px;
-    }
-
-    span {
-      font-size: 18px;
-      line-height: 1.2307;
-      font-weight: 700;
-      letter-spacing: 3px;
-      margin-bottom: 42px;
-    }
-  }
-
   .our-skils__block {
     padding: 30px 0px;
 
