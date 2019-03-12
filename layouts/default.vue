@@ -31,7 +31,7 @@
       <nuxt />
     </v-content>
 
-    <footer>
+    <!-- <footer>
       <div class="footer__bg">
         <v-container grid-list-xl>
           <v-layout row wrap grid-list-sm>
@@ -70,13 +70,16 @@
           </p>
         </v-container>
       </div>
-    </footer>
+    </footer> -->
+    <my-footer id="contacts" />
 
   </v-app>
 </template>
 
 <script>
+import MyFooter from '@/components/layouts/MyFooter'
   export default {
+    components:{MyFooter},
     data() {
       return {
         drawer: null,
@@ -91,7 +94,7 @@
           {
             title: 'News',
             link: '/news'
-          }
+          },
         ]
       }
     }
@@ -132,41 +135,6 @@
           }
         }
       }
-    }
-  }
-
-  .footer__bg {
-    background: #232a35;
-    font-size: 14px;
-    line-height: 24px;
-    padding: 68px 0 18px;
-
-    .footer__title {
-      font-size: 16px;
-      line-height: 1.2307;
-      font-weight: 400;
-      color: #b3bbc1;
-      font-style: normal;
-      letter-spacing: 3px;
-      margin-bottom: 26px;
-    }
-
-    .footer__text {
-      font-size: 14px;
-      line-height: 24px;
-      color: #b3bbc1;
-    }
-  }
-
-  .footer__bottom {
-    background: #1c222b;
-    color: #b3bbc1;
-
-    .copy {
-      font-size: 14px;
-      margin-bottom: 20px;
-      margin: 7px 0;
-      text-align: right;
     }
   }
 </style>
